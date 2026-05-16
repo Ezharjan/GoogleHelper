@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 92" role="img" aria-label="Google">
+    <title>Google</title>
+    <g font-family="'Product Sans','Helvetica Neue',Arial,sans-serif" font-size="90" font-weight="500" letter-spacing="-2">
+        <text x="0"   y="74" fill="#4285F4">G</text>
+        <text x="60"  y="74" fill="#EA4335">o</text>
+        <text x="108" y="74" fill="#FBBC05">o</text>
+        <text x="156" y="74" fill="#4285F4">g</text>
+        <text x="202" y="74" fill="#34A853">l</text>
+        <text x="222" y="74" fill="#EA4335">e</text>
+    </g>
+</svg>

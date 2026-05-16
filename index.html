@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Let Me Google That For You - a friendly way to show someone how to search for an answer themselves." />
+
+    <title>Let Me Google That For You</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/google_logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/base64.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body onblur="typeInfoText()">
+    <section id="search">
+        <div class="search-header">
+            <h2>
+                <span class="let-me">Let me</span>
+                <img src="img/google_logo.svg" alt="Google" title="Let me Google that for you" />
+                <span class="for-you">that for you</span>
+            </h2>
+        </div>
+
+        <form id="search-form">
+            <div class="search-form-group">
+                <div class="search-form-input">
+                    <input type="search" id="kw" maxlength="255" autocomplete="off" placeholder="Type your question here..." required />
+                </div>
+                <button id="search-submit">Google Search</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="function">
+        <p id="tips">Type a question, then click "Google Search".</p>
+
+        <button id="stop">Stop! I already know how to Google.</button>
+
+        <div id="output">
+            <textarea id="url-output" rows="3" readonly></textarea>
+            <div class="tool-btns">
+                <button data-clipboard-target="#url-output">Copy</button>
+                <button id="preview">Preview</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <ul class="footer-right">
+            <li style="color:khaki;">
+                * This site is not affiliated with Google LLC. All logos shown are trademarks of their respective owners.
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        let infoTxt = "Hello! Thanks for visiting. Have fun using Let Me Google That For You!";
+        function typeInfoText(infoStr = "", charIndex = 0) {
+            let logTxtStyle = "font-size:20px;color:orangered;font-weight:bold;";
+            setTimeout(function () {
+                if (charIndex >= infoTxt.length) {
+                    return;
+                }
+                console.clear();
+                infoStr += infoTxt[charIndex];
+                console.log("%c" + infoStr, logTxtStyle);
+                charIndex++;
+                typeInfoText(infoStr, charIndex);
+            }, 100);
+        }
+    </script>
+
+    <div id="arrow"></div>
+</body>
+
+</html>
